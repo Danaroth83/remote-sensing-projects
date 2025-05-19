@@ -122,7 +122,7 @@ Note:
   next one.
 - All the material (code included) has to be provided in English.
 
-### Mid course deliverable
+### Mid course deliverables
 Each group has to provide a pdf for the mid-course presentation slides, which
 have to include:
 - A *problem statement*, that is:
@@ -141,7 +141,7 @@ have to include:
   - The image and metadata format;
   - Description of the scripts used.
 
-### End course deliverable
+### End course deliverables
 At the final session of the course, each group has to provide:
 - A repository containing all the code that you have developed during the 
   project, generated after forking this repository. 
@@ -160,8 +160,8 @@ At the final session of the course, each group has to provide:
     - A procedure to showcase all the tested methods for data processing;
     - Tests, experiments and results comparisons
     - Optionally, you can also provide a notebook to show the results
-      visually, but the code in the notebook has to be minimal, and call
-      the functions contained in your `src` folder.
+      visually; its code has to be minimal, and ideally just call the main 
+      function under your `src` folder.
 - A pdf for the final presentation slides, extending the mid-course one with:
   - A description of the methods
   - A visual comparison of the results
