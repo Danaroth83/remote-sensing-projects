@@ -152,7 +152,8 @@ At the final session of the course, each group has to provide:
   - A main script that fully reproduce your full work pipeline.
     Ideally, this code should be launchable with no modification on any 
     machine with the virtual environment information you have provided;
-  - All the data that you have downloaded from external sources;
+  - All the data that you have downloaded from external sources, and NOT 
+    any that was provided by your supervisors;
   - The main script should include:
     - An automatic downloader of the data online, if applicable; 
     - A data visualization script to highlight the characteristics of the 
@@ -184,18 +185,23 @@ The project structure is available at `projects\template\README.md`, also
 described in the "Getting started" section.
 
 Henceforth, in your project folder:
-- `notebooks`: has to include the Jupyter notebook of your work (Note: marimo 
-  notebooks are also accepted).
 - `reports`: has to contain the presentations and the final report.
 - `src`: has to include the clean Python scripts.
+- `notebooks`: optional, which has to include the digital notebooks of your 
+  work (Note: Jupyter or marimo notebooks are accepted). These may be used 
+  to provide artifacts of your visualized data.
 
 The deliverables are to be provided either:
-- as a merge request to the central repository. Please do not make any change 
-  outside your assigned folder (should be `projects/20xx_20xx/xx-projectname`).
+- providing a link to the forked repository, with access granted to your
+  supervisors. This is the preferred method, as it allows to also store
+  your data.
 - as a mail to the supervisors (please include only your project folder), 
-  using a [https://filesender.renater.fr/](Renater) link.
+  using a [https://filesender.renater.fr/](Renater) link. Please confirm 
+  with your supervisor that the data was properly downloaded.
 - through Chamilo in the Travaux section, within the  `Projet Teledetection` 
   group of your academic year, uploading a zip file of your project folder.
+  Chamilo has a file size limit for uploads, so this is the least preferred
+  approach.
 
 The instructions for interfacing through `git` are located in 
 `projects\template\docs\instructions_git.md`.
