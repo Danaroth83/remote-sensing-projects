@@ -145,8 +145,8 @@ have to include:
 At the final session of the course, each group has to provide:
 - A repository containing all the code that you have developed during the 
   project, generated after forking this repository. 
-  The code shoudl follow the provided template to organiwe your data; the
-  project structure is described in `projects\template\README.md`.
+  The code should follow the structure to organize your data described in
+  `projects\template\README.md`.
   This repository has to include:
   - A README.md that explains briefly how to launch your code;
   - A main script that fully reproduce your full work pipeline.
