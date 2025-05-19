@@ -143,7 +143,7 @@ have to include:
 
 ### End course deliverable
 At the final session of the course, each group has to provide:
-_ A repository containing all the code that you have developed during the 
+- A repository containing all the code that you have developed during the 
   project, generated after forking this repository. 
   The code shoudl follow the provided template to organiwe your data; the
   project structure is described in `projects\template\README.md`.
