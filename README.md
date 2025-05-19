@@ -143,14 +143,25 @@ have to include:
 
 ### End course deliverable
 At the final session of the course, each group has to provide:
-- A notebook describing how to access the code in your project, which has to 
-  include:
-  - How download the data from an online platform;
-  - A data visualization, highlighting its peculiarities;
-  - A script to showcase all the tested methods;
-  - Tests, experiments and results comparisons
-  - *NOTE:* The code in the notebook has to be minimal, calling the functions 
-    contained in your `src` folder.
+_ A repository containing all the code that you have developed during the 
+  project, generated after forking this repository. 
+  The code shoudl follow the provided template to organiwe your data; the
+  project structure is described in `projects\template\README.md`.
+  This repository has to include:
+  - A README.md that explains briefly how to launch your code;
+  - A main script that fully reproduce your full work pipeline.
+    Ideally, this code should be launchable with no modification on any 
+    machine with the virtual environment information you have provided;
+  - All the data that you have downloaded from external sources;
+  - The main script should include:
+    - An automatic downloader of the data online, if applicable; 
+    - A data visualization script to highlight the characteristics of the 
+      input data;
+    - A procedure to showcase all the tested methods for data processing;
+    - Tests, experiments and results comparisons
+    - Optionally, you can also provide a notebook to show the results
+      visually, but the code in the notebook has to be minimal, and call
+      the functions contained in your `src` folder.
 - A pdf for the final presentation slides, extending the mid-course one with:
   - A description of the methods
   - A visual comparison of the results
@@ -162,9 +173,7 @@ At the final session of the course, each group has to provide:
     - Description of the validation framework
     - Discussion on the results:
       - Objective, through quality indices (presented through tables)
-      - Qualitative, by visually comparing the results
-Please follow the provided template to organize your data; the project 
-structure is available at `projects\template\README.md`.
+      - Qualitative, by visually comparing the results.
 
 ### Handing out your deliverables
 The deliverables have to be added to your project main folder according to the
