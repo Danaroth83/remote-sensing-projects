@@ -166,8 +166,7 @@ At the final session of the course, each group has to provide:
 - A pdf for the final presentation slides, extending the mid-course one with:
   - A description of the methods
   - A visual comparison of the results
-- A final report written in LaTex, which details all the work done during the 
-  project:
+- A final report written in LaTex or in the format of a fully annotated notebook, which details all the work done during the in the project:
     - Sources used in your work (literature, online repositories)
     - Problem statement, with detailed formulation of the input and outputs
     - Mathematical description of the methods
