@@ -50,7 +50,8 @@ structure across different groups and across different academic years.
     project            <- Root folder of your project. Do not add or change any 
     │                     file outside this folder.  
     ├── data           <- Contains a subset of the data, with relatively small  
-    │   │                 size (<10 MB), to run a demo of your script. 
+    │   │                 size (<10 MB), to run a demo of your script.
+    │   ├── weights    <- stores trained weights, for machine learning projects 
     │   ├── raw        <- Input data
     │   └── outputs    <- Processed data
     ├── docs           <- Contains the official documentation related to the  

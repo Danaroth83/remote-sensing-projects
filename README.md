@@ -275,7 +275,7 @@ The instructions for interfacing through `git` are located in
   - Mauro Dalla Mura (2016-)
 ## Supervisors
   - Aurélien Godet (2025)
-  - Daniele Picone (2021-2022/2025)
+  - Daniele Picone (2021-2022, 2025)
   - Mohamad Jouni (2022-2024)
   - Chloé Poulic (2024)
   - Matthieu Muller (2022-2023)
