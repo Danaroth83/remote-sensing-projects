@@ -70,10 +70,26 @@ Additionally, the student will develop the following set of acquired skills:
 
 To begin this project:
 
-- Fork this repository to your own account on GRICAD
-- Copy the folder of your chosen project from `projects/subjects` to the one of 
-  your academic year (e.g. `projects/2024_2025` for 2024/2025).
-- Install your project dependencies and download the data for your project by typing in the terminal:
+- Go to gitlab-gricad (https://gricad-gitlab.univ-grenoble-alpes.fr/)
+- Click on New project > Blank project
+- Select a project name, put it as "Public" and de-select "Add README.md"
+- Note down the repository name. Should be something like:
+  ```
+  https://gricad-gitlab.univ-grenoble-alpes.fr/username/project.git
+  ```
+  where `username` is your AGALAN and `project` is the project name
+  NOTE: You may want to add your group colleagues as team members.
+- From this repository, copy the chosen project from `projects/subjects` 
+  to the your local path.
+- Navigate to your local path and type in the terminal:
+  ```bash
+  git init -b main
+  git remote add origin https://gricad-gitlab.univ-grenoble-alpes.fr/username/project.git
+  git pull origin main
+  ```
+  with the proper link you have generated before
+- Install your project dependencies and download the data for your project
+  by typing in the terminal:
 
   - On Linux/Mac:
   ```bash
@@ -104,8 +120,16 @@ To begin this project:
   python src/data_loading.py
   ```
 
-- Update the # Group Member names section of the `LOG.md` file in your project 
-  folder with the names of all the members of your group. 
+- At every code update run:
+  ```
+  git add .
+  git commit -m "A message for your modifications"
+  git pull origin main
+  git push origin main
+  ```
+
+- Update the # Group Member names section of the `LOG.md` file in your 
+  project folder with the names of all the members of your group. 
 - Note: Projects from previous years are available at:
   https://gricad-gitlab.univ-grenoble-alpes.fr/piconed/remote-sensing-projects-archive
 - Some datasets associated to the projects are available at:
