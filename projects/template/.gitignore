@@ -91,4 +91,16 @@ target/
 # pytest cache
 .pytest_cache/
 
+# Virtual environments
+.venv
+venv
+
+# Lock files
+uv.lock
+poetry.lock
+
 # Custom exclusions
+data/raw/*
+!data/raw/
+!data/raw/readme.txt
+!data/raw/.gitkeep

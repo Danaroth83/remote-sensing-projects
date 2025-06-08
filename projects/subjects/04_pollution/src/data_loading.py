@@ -69,7 +69,8 @@ def visualize_data():
     ax.set_ylabel("Latitude")
     ax.set_title("TROPOMI Tropospheric NO₂ Column")
     fig.tight_layout()
-    plt.show()
+    fig.savefig(cwd / "data/outputs/demo.png")
+    plt.close(fig)
 
 
 def main():

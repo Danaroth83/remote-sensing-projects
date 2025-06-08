@@ -67,7 +67,8 @@ def visualize_data():
     ax[0].set_title("Multispectral")
     ax[1].imshow(img_pan, cmap="gray")
     ax[1].set_title("Panchromatic")
-    plt.show()
+    fig.savefig(cwd / "data/outputs/demo.png")
+    plt.close(fig)
 
 def main():
     download_data()

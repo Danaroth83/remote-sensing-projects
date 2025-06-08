@@ -60,7 +60,8 @@ def visualize_data():
         )
         ax.add_patch(rect)
 
-    plt.show()
+    fig.savefig(cwd / "data/outputs/demo.png")
+    plt.close(fig)
 
 
 def main():

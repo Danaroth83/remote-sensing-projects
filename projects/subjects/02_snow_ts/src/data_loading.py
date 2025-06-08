@@ -35,20 +35,6 @@ def download_data():
                 f"{e}"
             )
 
-def data_info():
-    filename_ndsi = "data/raw/modis-snow-coverage/data/2013039/Modimlab_2013039_reproj2.tif"
-
-    cwd = Path(__file__).resolve().parents[1]
-    file_ndsi = cwd / filename_ndsi
-
-    with rasterio.open(file_ndsi) as img:
-        print("File info:")
-        print(f"- Dimensions: {img.width} x {img.height} x {img.count}")
-        print(f"- CRS: {img.crs}")
-        print(f"- Bounds: {img.bounds}")
-        print(f"- Dtype: {img.dtypes}")
-        print(f"- Driver: {img.driver}")
-
 
 def visualize_data():
     filename_hsi = "data/raw/modis-snow-coverage/data/2013039/Modimlab_2013039_reproj2.tif"
@@ -77,7 +63,6 @@ def visualize_data():
 
 def main():
     download_data()
-    data_info()
     visualize_data()
 
 if __name__ == "__main__":

@@ -110,7 +110,8 @@ def visualize_data():
         title="Classes",
     )
 
-    plt.show()
+    fig.savefig(cwd / "data/outputs/demo.png")
+    plt.close(fig)
 
 
 def main():

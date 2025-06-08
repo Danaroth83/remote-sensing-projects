@@ -1,14 +1,4 @@
-__pycache__
-.vscode
-uv.lock
-poetry.lock
-.venv
-
-
-
-# Custom definitions
-data/*
-!data/readme.tx# Byte-compiled / optimized / DLL files
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 

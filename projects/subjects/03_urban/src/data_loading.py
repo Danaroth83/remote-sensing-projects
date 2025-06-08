@@ -79,8 +79,9 @@ def visualize_data():
         bbox_to_anchor=(1.25, 1),
         title="Classes",
     )
-
-    plt.show()
+    
+    fig.savefig(cwd / "data/outputs/demo.png")
+    plt.close(fig)
 
 
 def main():
