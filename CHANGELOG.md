@@ -3,10 +3,10 @@ Log changes of the project
 
 # 2025
 
-- Added new project specific template under /projects/subject
-- Added projects reports from 2024
-- Switched datasets to huggingface repositories
-- Moved previous projects to archived repository
+- Changed project templates and restructured them under `projects/`
+- Moved data to external huggingface repositories
+- Moved previous year reports to a dedicated repository: https://www.gricad-gitlab.univ-grenoble-alpes.fr/piconed/remote-sensing-projects-archive
+- Added one new project
 
 # 2023
 
