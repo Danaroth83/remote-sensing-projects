@@ -1,0 +1,36 @@
+[project]
+name = "template"
+version = "0.1.0"
+description = "Example template for the remote sensing project."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "geopandas>=1.0.1",
+    "huggingface-hub>=0.30.2",
+    "imageio>=2.37.0",
+    "jupyter>=1.1.1",
+    "jupyterlab>=4.4.0",
+    "opencv-python>=4.11.0.86",
+    "rasterio>=1.4.3",
+    "tqdm>=4.67.1",
+    "pyqt5>=5.15.11; sys_platform == 'linux'",
+    "netcdf4>=1.7.2",
+    "h5netcdf>=1.6.1",
+    "kaggle>=1.7.4.2",
+    "xarray>=2024.7.0",
+    "numpy>=2.0.2",
+    "cartopy>=0.23.0",
+    "matplotlib>=3.9.4",
+    "scipy>=1.13.1",
+    "tifffile>=2024.8.30",
+]
+
+[tool.uv.pip]
+torch-backend = "auto"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["src", "src.*"]

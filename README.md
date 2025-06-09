@@ -72,15 +72,16 @@ To begin this project:
 
 - Go to gitlab-gricad (https://gricad-gitlab.univ-grenoble-alpes.fr/)
 - Click on New project > Blank project
-- Select a project name, put it as "Public" and de-select "Add README.md"
+- Select a project name, put it as "Public", and de-select 
+  "Add README.md"
 - Note down the repository name. Should be something like:
   ```
   https://gricad-gitlab.univ-grenoble-alpes.fr/username/project.git
   ```
   where `username` is your AGALAN and `project` is the project name
   NOTE: You may want to add your group colleagues as team members.
-- From this repository, copy the chosen project from `projects/subjects` 
-  to the your local path.
+- From this repository, copy the chosen project from the folder 
+  `projects\` to the your local path.
 - Navigate to your local path and type in the terminal:
   ```bash
   git init -b main
@@ -92,28 +93,28 @@ To begin this project:
   by typing in the terminal:
 
   - On Linux/Mac:
-  ```bash
-  cd projects/20xx_20xx/xx-projectname
-  python -m venv .venv --prompt projectname
-  source .venv/bin/activate
-  pip install pip --upgrade
-  pip install -e .
-  ```
-  or, more briefly, using the provided script:
-  ```bash
-  cd projects/20xx_20xx/xx-projectname
-  source install.sh
-  ```
+    ```bash
+    cd projectname
+    python -m venv .venv --prompt projectname
+    source .venv/bin/activate
+    pip install pip --upgrade
+    pip install -e .
+    ```
+    or, more briefly, using the provided script:
+    ```bash
+    cd projectname
+    source install.sh
+    ```
 
   - On Windows:
-  ```
-  cd projects\20xx_20xx\xx-projectname
-  python -m venv .venv --prompt projectname
-  Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-  .\.venv\Scripts\activate
-  pip install pip --upgrade
-  pip install -e .
-  ```
+    ```
+    cd projectname
+    python -m venv .venv --prompt projectname
+    Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+    .\.venv\Scripts\activate
+    pip install pip --upgrade
+    pip install -e .
+    ```
   
 - You can then test the loading script provided:
   ```bash
@@ -170,7 +171,7 @@ At the final session of the course, each group has to provide:
 - A repository containing all the code that you have developed during the 
   project, generated after forking this repository. 
   The code should follow the structure to organize your data described in
-  `projects\template\README.md`.
+  `projects\00_template\README.md`.
   This repository has to include:
   - A README.md that explains briefly how to launch your code;
   - A main script that fully reproduce your full work pipeline.
@@ -204,7 +205,7 @@ The deliverables have to be added to your project main folder according to the
 project organization described in the following section.
 
 Please follow the provided template to organize your data. 
-The project structure is available at `projects\template\README.md`, also 
+The project structure is available at `projects\00_template\README.md`, also 
 described in the "Getting started" section.
 
 Henceforth, in your project folder:
@@ -226,61 +227,63 @@ The deliverables are to be provided either:
   Chamilo has a file size limit for uploads, so this is the least preferred
   approach.
 
-The instructions for interfacing through `git` are located in 
-`projects\template\docs\instructions_git.md`.
+The instructions for interfacing through `git` are located in:
+`docs\git\report\instructions.pdf`  
+More general purpose instructions are available at:
+`docs\git\instructions_git.md`.
 
 
 # Projects
 
 ## Active projects
 
-### [2 - Snow cover estimation based on remote sensing time series](projects/subjects/02_snow_ts)
+### [2 - Snow cover estimation based on remote sensing time series](projects/02_snow_ts)
 
 ![MODIS_feb](./docs/figs/MODIS_feb.png)
 ![MODIS_may](./docs/figs/MODIS_may.png)
 
-### [3 - Mapping the Grenoble urban environment by remote sensing](projects/subjects/03_urban)
+### [3 - Mapping the Grenoble urban environment by remote sensing](projects/03_urban)
 
 ![urban](./docs/figs/Grenoble_classif.png)
 
-### [4 - Monitoring pollution in the atmosphere](projects/subjects/04_pollution)
+### [4 - Monitoring pollution in the atmosphere](projects/04_pollution)
 
 ![NO2map](./docs/figs/NO2map.png)
 
-### [5 - Analysis of the forest around Grenoble using remote sensing imaging](projects/subjects/05_forest)
+### [5 - Analysis of the forest around Grenoble using remote sensing imaging](projects/05_forest)
 
 ![Forest](./docs/figs/Cluster.png)
 
-### [6 - Solar irradiance estimation at GreEn-Er](projects/subjects/06_irradiance)
+### [6 - Solar irradiance estimation at GreEn-Er](projects/06_irradiance)
 
 ![irradiance](./docs/figs/cam2_UTC_19-01-02_10-59-59-84.jpg)
 
-### [8 - Ship detection challenge](projects/subjects/08_ship_detection)
+### [8 - Ship detection challenge](projects/08_ship_detection)
 
 ![Example of image acquired by SPOT for ship detection.](./docs/figs/ships_xs.jpg)
 
-### [10 - Pansharpening with SPOT](projects/subjects/10_pansharpening)
+### [10 - Pansharpening with SPOT](projects/10_pansharpening)
 
 ![Example of SPOT multispectral and panchromatic](./docs/figs/pansharpening.png)
 
 ## Inactive projects
  
-### [1 - Snow cover estimation based on remote sensing high spatial resolution images](projects/subjects/01_snow_hr)
+### [1 - Snow cover estimation based on remote sensing high spatial resolution images](projects/01_snow_hr)
 
 <!--- ![Sentinel-2](./docs/figs/S2_snow.png) --->
 
-### [7 - Urban Monitoring: Change Detection Bundle](projects/subjects/07_change_detection)
+### [7 - Urban Monitoring: Change Detection Bundle](projects/07_change_detection)
 
 <!--- ![change_detection](./docs/figs/change-detection.jpg) --->
 
-### [9 - Remote Sensing video analysis](projects/subjects/09_rs_video)
+### [9 - Remote Sensing video analysis](projects/09_rs_video)
 
 <!---
   <figure class="video_container">
     <iframe src="https://sandbox.intelligence-airbusds.com/web/assets/mp4/beach.mp4" frameborder="0" allowfullscreen="true"> </iframe>
   </figure>
 --->
-### [11 - Deforestation of the Amazon forest](projects/subjects/11_deforestation)
+### [11 - Deforestation of the Amazon forest](projects/11_deforestation)
 
 
 ## Useful resources
