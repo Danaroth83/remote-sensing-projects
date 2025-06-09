@@ -12,6 +12,7 @@ dependencies = [
     "pyqt5>=5.15.11; sys_platform == 'linux'",
     "netcdf4>=1.7.2",
     "xarray>=2024.7.0",
+    "setuptools>=80.9.0",
 ]
 
 [tool.uv.pip]

@@ -6,9 +6,10 @@ readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
     "huggingface-hub>=0.30.2",
-    "matplotlib>=3.10.1",
+    "matplotlib>=3.9.4",
     "tifffile>=2024.8.30",
     "pyqt5>=5.15.11; sys_platform == 'linux'",
+    "setuptools>=80.9.0",
 ]
 
 [tool.uv.pip]

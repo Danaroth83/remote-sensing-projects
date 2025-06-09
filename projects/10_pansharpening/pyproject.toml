@@ -9,6 +9,7 @@ dependencies = [
     "imageio>=2.37.0",
     "matplotlib>=3.9.4",
     "pyqt5>=5.15.11; sys_platform == 'linux'",
+    "setuptools>=80.9.0",
 ]
 
 [tool.uv.pip]

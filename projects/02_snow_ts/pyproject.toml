@@ -11,6 +11,7 @@ dependencies = [
     "pyqt5>=5.15.11; sys_platform == 'linux'",
     "rasterio>=1.4.3",
     "scipy>=1.13.1",
+    "setuptools>=80.9.0",
     "tifffile>=2024.8.30",
 ]
 
