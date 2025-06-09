@@ -33,6 +33,10 @@ in image and signal processing courses on 6 different remote sensing
 applications related to the observation of the environment.
 
 This project will be developed in Python.
+Previous projects are available at:
+
+[https://www.gricad-gitlab.univ-grenoble-alpes.fr/piconed/remote-sensing-projects-archive]()
+
 
 ### Objectives of the course
 The main objectives of this project are:
@@ -70,9 +74,9 @@ Additionally, the student will develop the following set of acquired skills:
 
 To begin this project:
 
-- Go to gitlab-gricad (https://gricad-gitlab.univ-grenoble-alpes.fr/)
-- Click on New project > Blank project
-- Select a project name, put it as "Public", and de-select 
+- Go to gricad-gitlab: [https://gricad-gitlab.univ-grenoble-alpes.fr/]()
+- Click on **New project** > **Blank project**
+- Select a project name, put it as **Public**, and de-select 
   "Add README.md"
 - Note down the repository name. Should be something like:
   ```
