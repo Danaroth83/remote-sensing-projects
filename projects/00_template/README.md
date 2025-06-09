@@ -68,7 +68,7 @@ structure across different groups and across different academic years.
     │   ├── raw         <- Input data
     │   └── outputs     <- Processed data
     ├── docs            <- Contains the official documentation related to 
-                           the dataset, methods, etc.  
+    │                      the dataset, methods, etc.  
     ├── notebooks       <- Contains the Jupyter notebooks to present how to use
     ├── reports         <- Contains reports and presentation
     │   ├── presentation_mid.pdf   <- Mid-project presentation slides

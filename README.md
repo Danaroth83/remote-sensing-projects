@@ -36,10 +36,10 @@ This project will be developed in Python.
 
 ## Important links
 - Projects developed in the previous academic years are available at:  
-  [https://www.gricad-gitlab.univ-grenoble-alpes.fr/piconed/remote-sensing-projects-archive]()
+  <https://www.gricad-gitlab.univ-grenoble-alpes.fr/piconed/remote-sensing-projects-archive>
 
 - The datasets associated to the projects are available at:
-  [https://huggingface.co/remote-sensing-ense3-grenoble-inp]()
+  <https://huggingface.co/remote-sensing-ense3-grenoble-inp>
 
 
 ### Objectives of the course
@@ -85,7 +85,7 @@ Additionally, the student will develop the following set of acquired skills:
 
 ### Create a personal git repository
 
-- Go to gricad-gitlab: [https://gricad-gitlab.univ-grenoble-alpes.fr/]()
+- Go to gricad-gitlab: <https://gricad-gitlab.univ-grenoble-alpes.fr/>
 - Click on **New project** > **Blank project**
 - Select a project name, put it as **Public**, and de-select 
   "Add README.md"
