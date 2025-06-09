@@ -1,9 +1,9 @@
 # Group Member names
 
-- Name Surname 1
-- Name Surname 2
-- Name Surname 3
-- Name Surname 4
+- Name Surname 1 <email@example.com>
+- Name Surname 2 <email@example.com>
+- Name Surname 3 <email@example.com>
+- Name Surname 4 <email@example.com>
 
 # Activity log
 

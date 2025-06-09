@@ -1,17 +1,26 @@
-# Amazon Deforestation Time Series Analysis
+# Project Title
 
-In this project, you'll explore how the Earth's surface is changing over time by analyzing multi-temporal data, analyzing the deforestation of the Amazon rainforest.
+This is a file to fill with bare minimum information to run your project.
+For the project instructions, check `PROJECT_OVERVIEW.md` in the same folder.
 
-## Project Objective
+## Team Members
 
-The goal of this project is to **analyze the progression of deforestation in the Amazon basin** using satellite imagery. You’ll extract and visualize trends over time using real-world remote sensing data.
+- Name Surname 1 — email@example.com
+- Name Surname 2 — email@example.com
 
-By the end of this project, you’ll:
-- Load time series satellite imagery of the Amazon region.
-- Apply vegetation indices like NDVI to detect changes.
-- Quantify and visualize deforestation trends over time.
-- (Optional) Predict future deforestation using a basic model.
+## Objective
 
-## Dataset
+Briefly describe the goal of your project. What problem are you solving? 
+What are you trying to demonstrate or explore?
 
-You can use either the provided dataset from **Sentinel-2** or download another dataset targeting the area across different years.
+## Usage
+
+Give all the information for any external user to run your code from scratch. In particular, mention where to fetch all input datasets if they are not included in your repository, all the prerequisites in case they are not specified in the `pyproject.toml` and how to run a main file that allows to run all the demo scripts that you have developed.
+
+The code snippet to run a demo typically looks like this:
+```bash
+# Example command to run your project
+python src/main.py --input data/input.csv --output results/
+```
+and you can include options and possible different datasets as 
+variable.

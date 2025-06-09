@@ -1,47 +1,26 @@
-# Remote sensing video analysis
-This project wants to explore processing video streams acquired by
-remote sensing satellites. This acquisition modality is still under
-development and can have a great potential in precision mapping and
-tracking objects in a scene.
+# Project Title
 
-The data used in this project are prototype video sequences from
-OPAZ acquired by Airbus during a flight test campaign over Barcelona, Catalonia in April 2016 @18cm resolution.
-OPAZ (Optical Advanced EO System for Zephyr) is a dedicated Earth Observation system for Zephyr, Airbus High Altitude Pseudo Satellite (HAPS).
-OPAZ is currently a prototype being developed by Airbus. It will provide
-persistent surveillance over regional areas at 20cm resolution optical
-imagery and video.
+This is a file to fill with bare minimum information to run your project.
+For the project instructions, check `PROJECT_OVERVIEW.md` in the same folder.
 
-Example of a remote sensing video acquired over a beach in Barcelona.
-<!-- blank line -->
-<figure class="video_container">
-  <iframe src="https://sandbox.intelligence-airbusds.com/web/assets/mp4/beach.mp4" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
-<!-- blank line -->
+## Team Members
 
-## Hints
+- Name Surname 1 — email@example.com
+- Name Surname 2 — email@example.com
 
-Possible applications that could be addressed by processing video frames:
+## Objective
 
-- identification and tracking of moving objects
-- superresolution: try to augment the spatial resolution of the scene by
-  taking advantage on the presence of multiple acquisitions
-- 3D model estimation by exploiting paraxial effects
+Briefly describe the goal of your project. What problem are you solving? 
+What are you trying to demonstrate or explore?
 
-Keywords:
+## Usage
 
-- object tracking
-- optical flow
-- image registration
-- background subtraction
+Give all the information for any external user to run your code from scratch. In particular, mention where to fetch all input datasets if they are not included in your repository, all the prerequisites in case they are not specified in the `pyproject.toml` and how to run a main file that allows to run all the demo scripts that you have developed.
 
----
-The dataset used in this project is courtesy of Airbus and can be found
-at [https://sandbox.intelligence-airbusds.com/web/](https://sandbox.intelligence-airbusds.com/web/).
-
-The participants working on this project accept the Airbus
-[Standard Technical Evaluation
-Licence](https://sandbox.intelligence-airbusds.com/web/assets/files/Technical-Evaluation-Licence-December2014.pdf),
-[OneAtlas Evaluation Licence](https://sandbox.intelligence-airbusds.com/web/assets/files/Technical-Evaluation-Licence-OneAtlas-20160929.pdf)
-and [Catalog API Licence](https://sandbox.intelligence-airbusds.com/web/assets/files/Terms_and_Conditions_for_Airbus_DS_Catalog_API_Service_2015.pdf)
-fully and without reserves.
-
+The code snippet to run a demo typically looks like this:
+```bash
+# Example command to run your project
+python src/main.py --input data/input.csv --output results/
+```
+and you can include options and possible different datasets as 
+variable.
