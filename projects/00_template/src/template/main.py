@@ -15,7 +15,7 @@ from src.utilities.utils_rasterio import rio_img_info
 
 
 def main():
-    project_path = Path(__file__).resolve().parents[1]
+    project_path = Path(__file__).resolve().parents[2]
     # Reading a standard image. Here we use the imageio package.
     # imageio can also read images that are not coded in 8 bits.
     # Other options exist, for example: open-cv

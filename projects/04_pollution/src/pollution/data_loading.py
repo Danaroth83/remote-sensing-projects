@@ -16,7 +16,7 @@ def download_data():
     # Example data repository name
     repository = "remote-sensing-ense3-grenoble-inp/tropomi-pollution"
 
-    cwd = Path(__file__).resolve().parents[1]
+    cwd = Path(__file__).resolve().parents[2]
     target_directory = cwd / out_folder
     if not target_directory.exists():
         try:
@@ -35,7 +35,7 @@ def download_data():
 
 def data_info():
     filename = "data/raw/tropomi-pollution/data/27_09_2020.nc"
-    cwd = Path(__file__).resolve().parents[1]
+    cwd = Path(__file__).resolve().parents[2]
     file_nc = cwd / filename
 
     with h5netcdf.File(file_nc, "r") as f:
@@ -47,7 +47,7 @@ def data_info():
 
 def visualize_data():
     filename = "data/raw/tropomi-pollution/data/27_09_2020.nc"
-    cwd = Path(__file__).resolve().parents[1]
+    cwd = Path(__file__).resolve().parents[2]
     file_nc = cwd / filename
 
     ds = xr.open_dataset(file_nc, group="PRODUCT")

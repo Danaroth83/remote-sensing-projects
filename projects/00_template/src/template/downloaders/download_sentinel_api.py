@@ -14,7 +14,7 @@ def main():
         password=password,
         api_url='https://scihub.copernicus.eu/dhus',
     )
-    current_path = Path(__file__).resolve().parent
+    current_path = Path(__file__).resolve().parents[3]
     save_path = current_path.joinpath("data/")
     geojson_file = save_path.joinpath("jsonfile.json")
 

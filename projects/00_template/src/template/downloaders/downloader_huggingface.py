@@ -26,7 +26,7 @@ def main():
     #      python downloader.py
     #      ```
 
-    cwd = Path(__file__).resolve().parent
+    cwd = Path(__file__).resolve().parents[3]
     target_directory = cwd / out_folder
     target_directory.mkdir(parents=True, exist_ok=True)
     huggingface_hub.snapshot_download(

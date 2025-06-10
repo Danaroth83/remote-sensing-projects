@@ -14,7 +14,7 @@ def download_data():
     # Example data repository name
     repository = "remote-sensing-ense3-grenoble-inp/ship-detection"
 
-    cwd = Path(__file__).resolve().parents[1]
+    cwd = Path(__file__).resolve().parents[2]
     target_directory = cwd / out_folder
     if not target_directory.exists():
         try:
@@ -35,7 +35,7 @@ def visualize_data():
     filename_rgb = "data/raw/ship-detection/data/1.png"
     filename_bb = "data/raw/ship-detection/data/metadata.jsonl"
 
-    cwd = Path(__file__).resolve().parents[1]
+    cwd = Path(__file__).resolve().parents[2]
     file_rgb = cwd / filename_rgb
     file_bb = cwd / filename_bb
 

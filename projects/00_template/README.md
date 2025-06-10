@@ -60,7 +60,7 @@ The following folder structure serves as a guideline to standardize the project
 structure across different groups and across different academic years.
 
 ------------
-    project             <- Root folder of your project. Do not add or change any 
+    xx_project             <- Root folder of your project. Do not add or change any 
     │                      file outside this folder.  
     ├── data            <- Contains a subset of the data, with relatively small  
     │   │                  size (<10 MB), to run a demo of your script.
@@ -75,8 +75,9 @@ structure across different groups and across different academic years.
     │   ├── presentation.pdf       <- Final presentation slides
     │   ├── report.pdf             <- Final report
     │   └── figures     <- Raw figures that you generated for your reports
-    └── src             <- Contains the source code in Python for the
-                           specific project.
+    └── src/project     <- Contains the source code in Python for the
+                           specific project. Put code in the subfolder and not
+                           under src directly.
     LOG.md              <- To track the progress at each session
     PROJECT_OVERVIEW.md <- Instructions for the project
     README.md           <- Has to include instructions to run your project.

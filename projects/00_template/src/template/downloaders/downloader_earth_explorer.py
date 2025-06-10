@@ -19,24 +19,24 @@ import time
 from getpass import getpass
 
 from tqdm import tqdm
-from landsatxplore.earthexplorer import EarthExplorer, EarthExplorerError
+from landsatxplore import earthexplorer
 from landsatxplore.api import API
 
 
-def _get_tokens_patched(body):
+def _get_tokens(body):
     """Get `csrf_token` and `__ncforminfo`."""
     csrf = re.findall(r'name="csrf" value="(.+?)"', body)[0]
     if not csrf:
-        raise EarthExplorerError("EE: login failed (csrf token not found).")
+        raise ValueError("EE: login failed (csrf token not found).")
     return csrf, None
 
 
 def earth_explorer_patched(username, password):
     with mock.patch(
-        "landsatxplore.earthexplorer._get_tokens",
-        side_effect=_get_tokens_patched,
+            "landsatxplore.earthexplorer._get_tokens",
+            side_effect=_get_tokens,
     ):
-        return EarthExplorer(username, password)
+        return earthexplorer.EarthExplorer(username, password)
 
 
 def satellite_images_downloader_function(
@@ -44,7 +44,7 @@ def satellite_images_downloader_function(
     latitude: float,
     longitude: float,
     api: API,
-    ee: EarthExplorer,
+    ee: earthexplorer.EarthExplorer,
     dataset: str = 'landsat_8_c1',
     start_date: str = '2017-01-01',
     end_date: str = '2022-01-01',
@@ -139,6 +139,7 @@ def satellite_images_downloader_function(
 
 
 def download_earth_explorer(**kwargs):
+    print("Please input your username and password. Request it at https://earthexplorer.usgs.gov/")
     username = input("Username: ")
     password = getpass("Password: ", stream=None)
 
@@ -181,8 +182,9 @@ def main():
     - `username` and `password` are linked to the M2M API.
         - To request access, go to: https://ers.cr.usgs.gov/profile/access
     """
+    main_path = Path(__file__).resolve().parents[3]
     options = {
-        'path': './../../data/satellite_images/Grenoble',
+        'path': main_path / 'data/satellite_images/Grenoble',
         'latitude': 45.2,
         'longitude': 5.7,
         'dataset': 'landsat_tm_c2_l2',

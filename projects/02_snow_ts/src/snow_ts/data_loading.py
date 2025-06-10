@@ -17,7 +17,7 @@ def download_data():
     # Example data repository name
     repository = "remote-sensing-ense3-grenoble-inp/modis-snow-coverage"
 
-    cwd = Path(__file__).resolve().parents[1]
+    cwd = Path(__file__).resolve().parents[2]
     target_directory = cwd / out_folder
     if not target_directory.exists():
         try:
@@ -39,7 +39,7 @@ def download_data():
 def visualize_data():
     filename_hsi = "data/raw/modis-snow-coverage/data/2013039/Modimlab_2013039_reproj2.tif"
     filename_mat = "data/raw/modis-snow-coverage/data/2013039/Spot_degrade_2013039.mat"
-    cwd = Path(__file__).resolve().parents[1]
+    cwd = Path(__file__).resolve().parents[2]
     file_hsi = cwd / filename_hsi
     file_mat = cwd / filename_mat
 

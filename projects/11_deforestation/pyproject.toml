@@ -1,7 +1,7 @@
 [project]
-name = "11-deforestation"
+name = "deforestation"
 version = "0.1.0"
-description = "Add your description here"
+description = "Analysis of deforestation of the Amazon forest."
 readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
@@ -19,4 +19,4 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
-include = ["src", "src.*"]
+where = ["src"]

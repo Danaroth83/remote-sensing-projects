@@ -30,7 +30,7 @@ def download_data():
     # Example data repository name
     repository = "remote-sensing-ense3-grenoble-inp/meteo-greener"
 
-    cwd = Path(__file__).resolve().parents[1]
+    cwd = Path(__file__).resolve().parents[2]
     target_directory = cwd / out_folder
     if not target_directory.exists():
         try:
@@ -53,7 +53,7 @@ def visualize_data():
     filename_rgb = "data/raw/meteo-greener/data/examples/19-07-01/cam2 UTC 19-07-01_10-59-59-40.jpg"
     filename_csv = "data/raw/meteo-greener/data/Meteo_GreEnER_01_Hour_2019_annee.csv"
 
-    cwd = Path(__file__).resolve().parents[1]
+    cwd = Path(__file__).resolve().parents[2]
     file_rgb = cwd / filename_rgb
     file_csv = cwd / filename_csv
 

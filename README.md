@@ -99,7 +99,10 @@ Additionally, the student will develop the following set of acquired skills:
 ### Generate a local copy of your project
 
 - From this repository, copy the chosen project from the folder 
-  `projects\` to the your local path (in the `C` drive).
+  `xx_project\` to the your local path (in the `C` drive).  
+  Here, `xx` denotes a numeric index and `project` is your assigned
+  project name
+
 - Navigate to your local path and type in the terminal:
   ```bash
   git init -b main
@@ -140,8 +143,11 @@ Additionally, the student will develop the following set of acquired skills:
 
 - You can then test the loading script provided:
   ```bash
-  python src/data_loading.py
+  python src/project/data_loading.py
   ```
+  where `project` is the name of your project.  
+  If the script runs correctly, a saved figure should be available in 
+  `data/outputs/demo.png`.
 
 ### Update your code
 
@@ -202,7 +208,8 @@ At the final session of the course, each group has to provide:
   `projects\00_template\README.md`.
   This repository has to include:
   - A `README.md` that explains briefly how to launch your code;
-  - A main script (in `src/main.py`) that reproduces your full work pipeline.
+  - A main script (in `src/project/main.py`) that reproduces your full
+    work pipeline.  
     Ideally, this code should be launchable with no modification on any 
     machine with the virtual environment information you have provided;
   - All the data that you have downloaded from external sources, and NOT 
@@ -283,7 +290,7 @@ More general purpose instructions are available at:
 
 ![Forest](./docs/figs/Cluster.png)
 
-### [6 - Solar irradiance estimation at GreEn-Er](projects/06_irradiance)
+### [6 - Solar irradiance estimation at GreEn-Er](projects/06_meteo)
 
 ![irradiance](./docs/figs/cam2_UTC_19-01-02_10-59-59-84.jpg)
 

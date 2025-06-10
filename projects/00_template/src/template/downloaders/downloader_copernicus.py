@@ -26,9 +26,9 @@ def satellite_images_downloader_function(location, api, ee, dataset='landsat_8_c
     lat = location['lat']
     lon = location['lon']
     print('\n\nSearching for scenes for the location:', '\nlatitude:', lat, '\nlongitude:', lon)
-    PATH_DATA = './'
-    PATH_SATELLITE_IMAGES = PATH_DATA + 'satellite_images/'
-    PATH_LOCATION = PATH_SATELLITE_IMAGES + location['country'] + '/'
+    PATH_DATA = Path(__file__).resolve().parents[3]
+    PATH_SATELLITE_IMAGES = PATH_DATA / 'data/satellite_images/'
+    PATH_LOCATION = PATH_SATELLITE_IMAGES / location['country']
 
     scenes = api.search(
         dataset=dataset,

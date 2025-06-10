@@ -16,7 +16,7 @@ def download_data():
     # Example data repository name
     repository = "remote-sensing-ense3-grenoble-inp/openearthmap-paris"
 
-    cwd = Path(__file__).resolve().parents[1]
+    cwd = Path(__file__).resolve().parents[2]
     target_directory = cwd / out_folder
     if not target_directory.exists():
         try:
@@ -38,7 +38,7 @@ def visualize_data():
     filename_rgb = "data/raw/openearthmap-paris/data/paris/images/paris_1.tif"
     filename_label = "data/raw/openearthmap-paris/data/paris/labels/paris_1.tif"
 
-    cwd = Path(__file__).resolve().parents[1]
+    cwd = Path(__file__).resolve().parents[2]
     file_rgb = cwd / filename_rgb
     file_label = cwd / filename_label
 

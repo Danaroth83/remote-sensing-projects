@@ -31,7 +31,7 @@ def download_data():
     # Example data repository name
     repository = "remote-sensing-ense3-grenoble-inp/forest-plot-analysis"
 
-    cwd = Path(__file__).resolve().parents[1]
+    cwd = Path(__file__).resolve().parents[2]
     target_directory = cwd / out_folder
     if not target_directory.exists():
         try:
@@ -66,7 +66,7 @@ def visualize_data():
     rgb_channels = [64, 28, 15]
     filename_hsi = filename_hsi[plot_id]
 
-    cwd = Path(__file__).resolve().parents[1]
+    cwd = Path(__file__).resolve().parents[2]
     file_hsi = cwd / filename_hsi
     file_label = cwd / filename_label
 

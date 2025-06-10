@@ -1,7 +1,7 @@
 [project]
-name = "06-irradiance"
+name = "meteo"
 version = "0.1.0"
-description = "Add your description here"
+description = "Assessment of irradiance using a meteorological camera."
 readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
@@ -21,4 +21,4 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
-include = ["src", "src.*"]
+where = ["src"]

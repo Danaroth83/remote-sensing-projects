@@ -28,7 +28,7 @@ def download_data():
     # Example data repository name
     repository = "remote-sensing-ense3-grenoble-inp/spot-pansharpening"
 
-    cwd = Path(__file__).resolve().parents[1]
+    cwd = Path(__file__).resolve().parents[2]
     target_directory = cwd / out_folder
     if not target_directory.exists():
         try:
@@ -51,7 +51,7 @@ def visualize_data():
     filename_ms = "data/raw/spot-pansharpening/data/1.TIF"
     filename_pan = "data/raw/spot-pansharpening/data/3.TIF"
 
-    cwd = Path(__file__).resolve().parents[1]
+    cwd = Path(__file__).resolve().parents[2]
     file_ms = cwd / filename_ms
     file_pan = cwd / filename_pan
 
@@ -69,6 +69,7 @@ def visualize_data():
     ax[1].set_title("Panchromatic")
     fig.savefig(cwd / "data/outputs/demo.png")
     plt.close(fig)
+
 
 def main():
     download_data()
