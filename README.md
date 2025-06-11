@@ -275,42 +275,42 @@ More general purpose instructions are available at:
 
 ### [2 - Snow cover estimation based on remote sensing time series](projects/02_snow_ts)
 
-![MODIS_feb](./docs/figs/MODIS_feb.png)
-![MODIS_may](./docs/figs/MODIS_may.png)
+![MODIS_feb](./docs/figures/MODIS_feb.png)
+![MODIS_may](./docs/figures/MODIS_may.png)
 
 ### [3 - Mapping the Grenoble urban environment by remote sensing](projects/03_urban)
 
-![urban](./docs/figs/Grenoble_classif.png)
+![urban](./docs/figures/Grenoble_classif.png)
 
 ### [4 - Monitoring pollution in the atmosphere](projects/04_pollution)
 
-![NO2map](./docs/figs/NO2map.png)
+![NO2map](./docs/figures/NO2map.png)
 
 ### [5 - Analysis of the forest around Grenoble using remote sensing imaging](projects/05_forest)
 
-![Forest](./docs/figs/Cluster.png)
+![Forest](./docs/figures/Cluster.png)
 
 ### [6 - Solar irradiance estimation at GreEn-Er](projects/06_meteo)
 
-![irradiance](./docs/figs/cam2_UTC_19-01-02_10-59-59-84.jpg)
+![irradiance](./docs/figures/cam2_UTC_19-01-02_10-59-59-84.jpg)
 
 ### [8 - Ship detection challenge](projects/08_ship_detection)
 
-![Example of image acquired by SPOT for ship detection.](./docs/figs/ships_xs.jpg)
+![Example of image acquired by SPOT for ship detection.](./docs/figures/ships_xs.jpg)
 
 ### [10 - Pansharpening with SPOT](projects/10_pansharpening)
 
-![Example of SPOT multispectral and panchromatic](./docs/figs/pansharpening.png)
+![Example of SPOT multispectral and panchromatic](./docs/figures/pansharpening.png)
 
 ## Inactive projects
  
 ### [1 - Snow cover estimation based on remote sensing high spatial resolution images](projects/01_snow_hr)
 
-<!--- ![Sentinel-2](./docs/figs/S2_snow.png) --->
+<!--- ![Sentinel-2](./docs/figures/S2_snow.png) --->
 
 ### [7 - Urban Monitoring: Change Detection Bundle](projects/07_change_detection)
 
-<!--- ![change_detection](./docs/figs/change-detection.jpg) --->
+<!--- ![change_detection](./docs/figures/change-detection.jpg) --->
 
 ### [9 - Remote Sensing video analysis](projects/09_rs_video)
 
