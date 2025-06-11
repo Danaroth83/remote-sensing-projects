@@ -5,8 +5,8 @@ For the project instructions, check `PROJECT_OVERVIEW.md` in the same folder.
 
 ## Team Members
 
-- Name Surname 1 — email@example.com
-- Name Surname 2 — email@example.com
+- Name Surname 1 <email@example.com>
+- Name Surname 2 <email@example.com>
 
 ## Objective
 
@@ -20,7 +20,5 @@ Give all the information for any external user to run your code from scratch. In
 The code snippet to run a demo typically looks like this:
 ```bash
 # Example command to run your project
-python src/main.py --input data/input.csv --output results/
+python src/pansharpening/main.py
 ```
-and you can include options and possible different datasets as 
-variable.

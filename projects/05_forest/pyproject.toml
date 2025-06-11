@@ -11,6 +11,7 @@ dependencies = [
     "pyqt5>=5.15.11; sys_platform == 'linux'",
     "pandas>=2.2.3",
     "setuptools>=80.9.0",
+    "dotenv>=0.9.9",
 ]
 
 [tool.uv.pip]

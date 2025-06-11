@@ -2,6 +2,7 @@ from pathlib import Path
 import shutil
 import os
 
+import dotenv
 import imageio
 import huggingface_hub
 import pandas as pd
@@ -30,21 +31,31 @@ def download_data():
     # Example data repository name
     repository = "remote-sensing-ense3-grenoble-inp/meteo-greener"
 
+    dotenv.load_dotenv()
+    token = os.getenv("HUGGINGFACE_TOKEN")
+
     cwd = Path(__file__).resolve().parents[2]
     target_directory = cwd / out_folder
     if not target_directory.exists():
+        if token is None:
+            raise ValueError(
+                "The repository forest requires a token.\n" +
+                "From the project root folder, copy .env.developement to " +
+                ".env and ask your supervisor to type the token there.\n" +
+                "Please save this file in a safe place for future downloads."
+            )
         try:
             target_directory.mkdir(parents=True, exist_ok=True)
             huggingface_hub.snapshot_download(
                 repo_id=repository,
                 repo_type="dataset",
                 local_dir=target_directory,
-                token=os.getenv("HUGGINGFACE_TOKEN")
+                token=token,
             )
         except Exception as e:
             shutil.rmtree(target_directory)
             raise ValueError(
-                f"Error downloading repository." +
+                "Error downloading repository." +
                 f"{e}"
             )
 
@@ -81,11 +92,10 @@ def visualize_data():
     plt.close(fig)
 
 
-
-
 def main():
     download_data()
     visualize_data()
+
 
 if __name__ == "__main__":
     main()

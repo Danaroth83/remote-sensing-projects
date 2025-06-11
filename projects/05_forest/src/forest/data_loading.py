@@ -2,6 +2,7 @@ from pathlib import Path
 import os
 import shutil
 
+import dotenv
 import numpy as np
 import pandas as pd
 import huggingface_hub
@@ -24,16 +25,25 @@ def download_data():
     #      python loading_data.py
     #      ```
 
-
     # Download target folder relative to current path
     out_folder = "data/raw/forest-plot-analysis"
 
     # Example data repository name
     repository = "remote-sensing-ense3-grenoble-inp/forest-plot-analysis"
 
+    dotenv.load_dotenv()
+    token = os.getenv("HUGGINGFACE_TOKEN")
+
     cwd = Path(__file__).resolve().parents[2]
     target_directory = cwd / out_folder
     if not target_directory.exists():
+        if token is None:
+            raise ValueError(
+                "The repository forest requires a token.\n" +
+                "From the project root folder, copy .env.developement to " +
+                ".env and ask your supervisor to type the token there.\n" +
+                "Please save this file in a safe place for future downloads."
+            )
         try:
             target_directory.mkdir(parents=True, exist_ok=True)
             huggingface_hub.snapshot_download(
@@ -45,7 +55,7 @@ def download_data():
         except Exception as e:
             shutil.rmtree(target_directory)
             raise ValueError(
-                f"Error downloading repository." +
+                "Error downloading repository.\n" +
                 f"{e}"
             )
 
