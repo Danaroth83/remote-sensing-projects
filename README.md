@@ -1,4 +1,4 @@
-![./docs/figures/GrenobleINP-Ense3_120px.png](./docs/figs/GrenobleINP-Ense3_120px.png)
+![./docs/figures/GrenobleINP-Ense3_120px.png](./docs/figures/GrenobleINP-Ense3_120px.png)
 # Remote Sensing Projects
 Remote Sensing Projects at ENSE3, Grenoble-INP.
 
