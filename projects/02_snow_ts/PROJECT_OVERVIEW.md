@@ -30,10 +30,10 @@ Grenoble is given below. Note the evolution of the snow cover between
 the two dates and the presence of missing values (black regions
 associated to cloud covered areas).
 
-![MODIS_area](../docs/figs/MODIS_area.png)*Area of study*
-![MODIS_feb](../docs/figs/MODIS_feb.png)*Example of MODIS image acquired
+![MODIS_area](../../docs/figures/MODIS_area.png)*Area of study*
+![MODIS_feb](../../docs/figures/MODIS_feb.png)*Example of MODIS image acquired
 in february*
-![MODIS_may](../docs/figs/MODIS_may.png)*Example of MODIS image acquired
+![MODIS_may](../../docs/figures/MODIS_may.png)*Example of MODIS image acquired
 in may*
 
 ## Objectives

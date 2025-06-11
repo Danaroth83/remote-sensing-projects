@@ -16,7 +16,7 @@ Moreover, due to the extreme diversity of different urban scenes, it seems very 
 
 You are going to implement your algorithms in Python, so you might as well start using good programming practices with this language right away. It's up to you to organise yourself to harmonise the different scripts you are going to write!
 
-![urban](../docs/figs/Grenoble_classif.png)*Example of land cover
+![urban](../../docs/figures/Grenoble_classif.png)*Example of land cover
 classification of the urban area in Grenoble*
 
 ### Resources

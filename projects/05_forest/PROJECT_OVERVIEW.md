@@ -17,7 +17,7 @@ The objective of this project is to carry out the *classification* of hyperspect
 
 It is up to you to vary the different parameters you can influence to find the configuration that gives the best possible classification!
 
-![Forest](../docs/figs/Cluster.png)*Example of tree species classification*
+![Forest](../../docs/figures/Cluster.png)*Example of tree species classification*
 
 Finally, you will be implementing your algorithms in Python, so you might as well start learning good programming practices with this language right away. It's up to you to organise yourself to harmonise the different scripts you are going to write!
 

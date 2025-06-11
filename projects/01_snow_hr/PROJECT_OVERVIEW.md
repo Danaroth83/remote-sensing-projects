@@ -29,7 +29,7 @@ produce synthetic images of both high spatial and spectral resolution by
 An example of an image acquired by Sentinel-2 over the sourroundings of
 Grenoble is given below.
 
-![Sentinel-2](../docs/figs/S2_snow.png)*Sentinel-2 image*
+![Sentinel-2](../../docs/figures/S2_snow.png)*Sentinel-2 image*
 
 ## Objectives
 This project aims at automatically estimating the snow cover extent with

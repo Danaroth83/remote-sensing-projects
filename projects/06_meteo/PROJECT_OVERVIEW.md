@@ -17,7 +17,7 @@ pointing the sky.
 This camera acquires an image every hour, which is archived.
 An example of an image acquired by the camera is reported below.
 
-![irradiance](../docs/figs/cam2_UTC_19-01-02_10-59-59-84.jpg)*Example of
+![irradiance](../../docs/figures/cam2_UTC_19-01-02_10-59-59-84.jpg)*Example of
 image acquired in January 2019*
 
 By analysing these images, it is possible to get an estimate of the

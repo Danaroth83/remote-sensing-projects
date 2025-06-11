@@ -12,7 +12,7 @@ This topic is broad enough to observe the evolution of air pollution in relation
 
 A second objective will be to exploit the data from the TROPOMI instrument. This instrument is embedded on the SENTINEL-5P satellite and allows the atmosphere to be imaged in order to study its various components (including $NO_2$). In the above-mentioned study, the $NO_2$ maps are looked at directly. It would be interesting to look at this one for the desired geographical study area.
 
-![NO2map](../docs/figs/NO2map.png)*Example of NO2 map*
+![NO2map](../../docs/figures/NO2map.png)*Example of NO2 map*
 
 You are going to implement your algorithms in Python, so you might as well learn the good programming practices with this language right away. It's up to you to organise yourself to harmonise the different scripts you are going to write!
 
@@ -22,7 +22,7 @@ It is up to you to download the data you want. Before downloading a large number
 
 You can find the TROPOMI data to be used at the following link: <https://s5phub.copernicus.eu/dhus/#/home> (login: s5pguest; password: s5pguest). The $NO_2$ maps can be accessed by filtering the data as shown in the following figure.
 
-![copernicus](../docs/figs/copernicus.png)
+![copernicus](../../docs/figures/copernicus.png)
 
 To manage your data, you can look at the following links, among others:
 - <http://www.acgeospatial.co.uk/sentinel-5p-and-python/>
