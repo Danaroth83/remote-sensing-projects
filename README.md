@@ -116,7 +116,13 @@ Additionally, the student will develop the following set of acquired skills:
 
 ### Link local code to your remote repository
 
-- Navigate to your local path (the one you downloaded and extracted before) and 
+- Navigate to your local path (the one you downloaded and extracted before)
+- Initialize your git credentials:
+  ```bash
+  git config --global user.name "Name Surname"
+  git config --global user.email "your.email@grenoble-inp.fr"
+  ```
+ 
 - Once you are at the root of your project, type in the terminal:
   ```bash
   git init -b main
