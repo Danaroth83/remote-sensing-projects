@@ -34,11 +34,11 @@ applications related to the observation of the environment.
 
 This project will be developed in Python.
 
-## Important links
-- Projects developed in the previous academic years are available at:  
+### Important links
+- Projects developed in the previous academic years are available at:    
   <https://www.gricad-gitlab.univ-grenoble-alpes.fr/piconed/remote-sensing-projects-archive>
 
-- The datasets associated to the projects are available at:
+- The datasets associated to the projects are available at:  
   <https://huggingface.co/remote-sensing-ense3-grenoble-inp>
 
 
@@ -278,57 +278,57 @@ More general purpose instructions are available at:
 `docs\git\instructions_git.md`.
 
 
-# Projects
+## Projects
 
-## Active projects
+### Active projects
 
-### [2 - Snow cover estimation based on remote sensing time series](projects/02_snow_ts)
+#### [2 - Snow cover estimation based on remote sensing time series](projects/02_snow_ts)
 
 ![MODIS_feb](./docs/figures/MODIS_feb.png)
 ![MODIS_may](./docs/figures/MODIS_may.png)
 
-### [3 - Mapping the Grenoble urban environment by remote sensing](projects/03_urban)
+#### [3 - Mapping the Grenoble urban environment by remote sensing](projects/03_urban)
 
 ![urban](./docs/figures/Grenoble_classif.png)
 
-### [4 - Monitoring pollution in the atmosphere](projects/04_pollution)
+#### [4 - Monitoring pollution in the atmosphere](projects/04_pollution)
 
 ![NO2map](./docs/figures/NO2map.png)
 
-### [5 - Analysis of the forest around Grenoble using remote sensing imaging](projects/05_forest)
+#### [5 - Analysis of the forest around Grenoble using remote sensing imaging](projects/05_forest)
 
 ![Forest](./docs/figures/Cluster.png)
 
-### [6 - Solar irradiance estimation at GreEn-Er](projects/06_meteo)
+#### [6 - Solar irradiance estimation at GreEn-Er](projects/06_meteo)
 
 ![irradiance](./docs/figures/cam2_UTC_19-01-02_10-59-59-84.jpg)
 
-### [8 - Ship detection challenge](projects/08_ship_detection)
+#### [8 - Ship detection challenge](projects/08_ship_detection)
 
 ![Example of image acquired by SPOT for ship detection.](./docs/figures/ships_xs.jpg)
 
-### [10 - Pansharpening with SPOT](projects/10_pansharpening)
+#### [10 - Pansharpening with SPOT](projects/10_pansharpening)
 
 ![Example of SPOT multispectral and panchromatic](./docs/figures/pansharpening.png)
 
-## Inactive projects
+### Inactive projects
  
-### [1 - Snow cover estimation based on remote sensing high spatial resolution images](projects/01_snow_hr)
+#### [1 - Snow cover estimation based on remote sensing high spatial resolution images](projects/01_snow_hr)
 
 <!--- ![Sentinel-2](./docs/figures/S2_snow.png) --->
 
-### [7 - Urban Monitoring: Change Detection Bundle](projects/07_change_detection)
+#### [7 - Urban Monitoring: Change Detection Bundle](projects/07_change_detection)
 
 <!--- ![change_detection](./docs/figures/change-detection.jpg) --->
 
-### [9 - Remote Sensing video analysis](projects/09_rs_video)
+#### [9 - Remote Sensing video analysis](projects/09_rs_video)
 
 <!---
   <figure class="video_container">
     <iframe src="https://sandbox.intelligence-airbusds.com/web/assets/mp4/beach.mp4" frameborder="0" allowfullscreen="true"> </iframe>
   </figure>
 --->
-### [11 - Deforestation of the Amazon forest](projects/11_deforestation)
+#### [11 - Deforestation of the Amazon forest](projects/11_deforestation)
 
 
 ## Useful resources
