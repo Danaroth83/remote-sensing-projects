@@ -329,11 +329,8 @@ More general purpose instructions are available at:
 
 #### [9 - Remote Sensing video analysis](projects/09_rs_video)
 
-<!---
-  <figure class="video_container">
-    <iframe src="https://sandbox.intelligence-airbusds.com/web/assets/mp4/beach.mp4" frameborder="0" allowfullscreen="true"> </iframe>
-  </figure>
---->
+<!--- ![Frame of remote sensing video](./docs/figures/beach.jpg) --->
+
 #### [11 - Deforestation of the Amazon forest](projects/11_deforestation)
 
 
