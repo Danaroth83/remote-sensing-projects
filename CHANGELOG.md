@@ -5,8 +5,11 @@ Log changes of the project
 
 - Changed project templates and restructured them under `projects/`
 - Moved data to external huggingface repositories
-- Moved previous year reports to a dedicated repository: https://www.gricad-gitlab.univ-grenoble-alpes.fr/piconed/remote-sensing-projects-archive
+- Moved the reports of previous years to a dedicated repository:  
+  https://www.gricad-gitlab.univ-grenoble-alpes.fr/piconed/remote-sensing-projects-archive
 - Added one new project
+- Added detailed documentation for git management
+- Added a `Getting started` section to the readme.
 
 # 2023
 
