@@ -1,4 +1,3 @@
-from pathlib import Path
 import shutil
 import json
 
@@ -7,15 +6,17 @@ import huggingface_hub
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 
+from ship_detection import paths
+
 def download_data():
     # Download target folder relative to current path
-    out_folder = "data/raw/ship-detection"
+    out_folder = "raw/ship-detection"
 
     # Example data repository name
     repository = "remote-sensing-ense3-grenoble-inp/ship-detection"
 
-    cwd = Path(__file__).resolve().parents[2]
-    target_directory = cwd / out_folder
+    data_path = paths.data()
+    target_directory = data_path / out_folder
     if not target_directory.exists():
         try:
             target_directory.mkdir(parents=True, exist_ok=True)
@@ -27,17 +28,17 @@ def download_data():
         except Exception as e:
             shutil.rmtree(target_directory)
             raise ValueError(
-                f"Error downloading repository." +
+                "Error downloading repository." +
                 f"{e}"
             )
 
 def visualize_data():
-    filename_rgb = "data/raw/ship-detection/data/1.png"
-    filename_bb = "data/raw/ship-detection/data/metadata.jsonl"
+    filename_rgb = "raw/ship-detection/data/1.png"
+    filename_bb = "raw/ship-detection/data/metadata.jsonl"
 
-    cwd = Path(__file__).resolve().parents[2]
-    file_rgb = cwd / filename_rgb
-    file_bb = cwd / filename_bb
+    data_path = paths.data()
+    file_rgb = data_path / filename_rgb
+    file_bb = data_path / filename_bb
 
     img = imageio.v3.imread(file_rgb)
 
@@ -60,7 +61,7 @@ def visualize_data():
         )
         ax.add_patch(rect)
 
-    fig.savefig(cwd / "data/outputs/demo.png")
+    fig.savefig(data_path / "outputs/demo.png")
     plt.close(fig)
 
 

@@ -1,4 +1,3 @@
-from pathlib import Path
 import shutil
 
 import numpy as np
@@ -8,16 +7,18 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap, BoundaryNorm
 import matplotlib.patches as mpatches
 
+from urban import paths
+
 
 def download_data():
     # Download target folder relative to current path
-    out_folder = "data/raw/openearthmap-paris"
+    out_folder = "raw/openearthmap-paris"
 
     # Example data repository name
     repository = "remote-sensing-ense3-grenoble-inp/openearthmap-paris"
 
-    cwd = Path(__file__).resolve().parents[2]
-    target_directory = cwd / out_folder
+    data_path = paths.data()
+    target_directory = data_path / out_folder
     if not target_directory.exists():
         try:
             target_directory.mkdir(parents=True, exist_ok=True)
@@ -29,18 +30,18 @@ def download_data():
         except Exception as e:
             shutil.rmtree(target_directory)
             raise ValueError(
-                f"Error downloading repository." +
+                "Error downloading repository." +
                 f"{e}"
             )
 
 
 def visualize_data():
-    filename_rgb = "data/raw/openearthmap-paris/data/paris/images/paris_1.tif"
-    filename_label = "data/raw/openearthmap-paris/data/paris/labels/paris_1.tif"
+    filename_rgb = "raw/openearthmap-paris/data/paris/images/paris_1.tif"
+    filename_label = "raw/openearthmap-paris/data/paris/labels/paris_1.tif"
 
-    cwd = Path(__file__).resolve().parents[2]
-    file_rgb = cwd / filename_rgb
-    file_label = cwd / filename_label
+    data_path = paths.data()
+    file_rgb = data_path / filename_rgb
+    file_label = data_path / filename_label
 
     rgb_array = tifffile.TiffFile(file_rgb)
     rgb_array = rgb_array.asarray()
@@ -80,7 +81,7 @@ def visualize_data():
         title="Classes",
     )
     
-    fig.savefig(cwd / "data/outputs/demo.png")
+    fig.savefig(data_path / "outputs/demo.png")
     plt.close(fig)
 
 

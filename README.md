@@ -83,6 +83,18 @@ Additionally, the student will develop the following set of acquired skills:
 - Within each folder of your assigned project, a more detailed description is 
   available in the `PROJECT_OVERVIEW.md` file
 
+### Generate a local copy of your project
+
+- From this repository, navigate to the folder of the chosen project
+- That is you should click on `projects` and then  on `xx_projectname`.
+  Here, `xx` denotes a numeric index and `project` is your assigned
+  project name.
+- You should now see files like `PROJECT_OVERVIEW.md`, among many others.
+- On the top right, click on the blue button `Code` and `Download this folder`
+  in `.zip` format.
+- Extract this folder on your `C` drive. This will be the root of your project
+  from now on.
+
 ### Create a personal git repository
 
 - Go to gricad-gitlab: <https://gricad-gitlab.univ-grenoble-alpes.fr/>
@@ -94,22 +106,24 @@ Additionally, the student will develop the following set of acquired skills:
   https://gricad-gitlab.univ-grenoble-alpes.fr/username/project.git
   ```
   where `username` is your AGALAN and `project` is the project name
-  NOTE: You may want to add your group colleagues as team members.
+- Add the colleagues in your group to the owners/mantainers of the project
+- On the left bar click "Members" and then on the top right "Add members" on the
+  page it opens.
+  Note: "Add members" is a blue button that appears only if you are 
+  owner/mantainer.
+- In the search bar, look for the agalan of your team members and add them to 
+  the repository as owners or mantainers.
 
-### Generate a local copy of your project
+### Link local code to your remote repository
 
-- From this repository, copy the chosen project from the folder 
-  `xx_project\` to the your local path (in the `C` drive).  
-  Here, `xx` denotes a numeric index and `project` is your assigned
-  project name
-
-- Navigate to your local path and type in the terminal:
+- Navigate to your local path (the one you downloaded and extracted before) and 
+- Once you are at the root of your project, type in the terminal:
   ```bash
   git init -b main
   git remote add origin https://gricad-gitlab.univ-grenoble-alpes.fr/username/project.git
   git pull origin main
   ```
-  with the proper link you have generated before
+  with the proper link you have generated in the previous step.
 
 ### Create your virtual enviroment
 
@@ -160,7 +174,7 @@ Additionally, the student will develop the following set of acquired skills:
   git push origin main
   ```
 
-- Update the # Group Member names section of the `LOG.md` file in your 
+- Update the Group Member names section of the `LOG.md` file in your 
   project folder with the names of all the members of your group. 
 
 

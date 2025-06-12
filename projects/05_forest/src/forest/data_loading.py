@@ -1,4 +1,3 @@
-from pathlib import Path
 import os
 import shutil
 
@@ -9,6 +8,8 @@ import huggingface_hub
 import matplotlib.pyplot as plt
 import tifffile
 import matplotlib.patches as mpatches
+
+from forest import paths
 
 def download_data():
     # The repository of this data is private
@@ -26,7 +27,7 @@ def download_data():
     #      ```
 
     # Download target folder relative to current path
-    out_folder = "data/raw/forest-plot-analysis"
+    out_folder = "raw/forest-plot-analysis"
 
     # Example data repository name
     repository = "remote-sensing-ense3-grenoble-inp/forest-plot-analysis"
@@ -34,8 +35,8 @@ def download_data():
     dotenv.load_dotenv()
     token = os.getenv("HUGGINGFACE_TOKEN")
 
-    cwd = Path(__file__).resolve().parents[2]
-    target_directory = cwd / out_folder
+    data_path = paths.data()
+    target_directory = data_path / out_folder
     if not target_directory.exists():
         if token is None:
             raise ValueError(
@@ -62,23 +63,23 @@ def download_data():
 
 def visualize_data():
     filename_hsi = {
-        "1": "data/raw/forest-plot-analysis/data/hi/1.tif",
-        "1b": "data/raw/forest-plot-analysis/data/hi/1b.tif",
-        "2": "data/raw/forest-plot-analysis/data/hi/2.tif",
-        "3": "data/raw/forest-plot-analysis/data/hi/3.tif",
-        "3b": "data/raw/forest-plot-analysis/data/hi/3b.tif",
-        "4": "data/raw/forest-plot-analysis/data/hi/4.tif",
-        "Premol": "data/raw/forest-plot-analysis/data/hi/Premol.tif",
+        "1": "raw/forest-plot-analysis/data/hi/1.tif",
+        "1b": "raw/forest-plot-analysis/data/hi/1b.tif",
+        "2": "raw/forest-plot-analysis/data/hi/2.tif",
+        "3": "raw/forest-plot-analysis/data/hi/3.tif",
+        "3b": "raw/forest-plot-analysis/data/hi/3b.tif",
+        "4": "raw/forest-plot-analysis/data/hi/4.tif",
+        "Premol": "raw/forest-plot-analysis/data/hi/Premol.tif",
     }
 
-    filename_label = "data/raw/forest-plot-analysis/data/gt/df_pixel.csv"
+    filename_label = "raw/forest-plot-analysis/data/gt/df_pixel.csv"
     plot_id = "1"
     rgb_channels = [64, 28, 15]
     filename_hsi = filename_hsi[plot_id]
 
-    cwd = Path(__file__).resolve().parents[2]
-    file_hsi = cwd / filename_hsi
-    file_label = cwd / filename_label
+    data_path = paths.data()
+    file_hsi = data_path / filename_hsi
+    file_label = data_path / filename_label
 
     rgb_array = tifffile.TiffFile(file_hsi)
     rgb_array = rgb_array.asarray()
@@ -120,7 +121,7 @@ def visualize_data():
         title="Classes",
     )
 
-    fig.savefig(cwd / "data/outputs/demo.png")
+    fig.savefig(data_path / "outputs/demo.png")
     plt.close(fig)
 
 

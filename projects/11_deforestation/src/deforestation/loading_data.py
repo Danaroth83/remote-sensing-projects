@@ -7,6 +7,8 @@ import huggingface_hub
 import matplotlib.pyplot as plt
 import imageio
 
+from deforestation import paths
+
 def download_data():
     # The repository of this data is private
     #    - Make a new account
@@ -23,13 +25,13 @@ def download_data():
     #      ```
 
     # Download target folder relative to current path
-    out_folder = "data/raw/deforestation-amazon"
+    out_folder = "raw/deforestation-amazon"
 
     # Example data repository name
     repository = "remote-sensing-ense3-grenoble-inp/deforestation-amazon"
 
-    cwd = Path(__file__).resolve().parents[2]
-    target_directory = cwd / out_folder
+    data_path = paths.data()
+    target_directory = data_path / out_folder
     if not target_directory.exists():
         try:
             target_directory.mkdir(parents=True, exist_ok=True)
@@ -42,7 +44,7 @@ def download_data():
         except Exception as e:
             shutil.rmtree(target_directory)
             raise ValueError(
-                f"Error downloading repository." +
+                "Error downloading repository." +
                 f"{e}"
             )
 

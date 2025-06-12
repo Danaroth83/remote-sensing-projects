@@ -1,4 +1,3 @@
-from pathlib import Path
 import shutil
 import os
 
@@ -8,6 +7,9 @@ import huggingface_hub
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
+
+from urban import paths
+
 
 def download_data():
     # The repository of this data is private
@@ -26,7 +28,7 @@ def download_data():
 
 
     # Download target folder relative to current path
-    out_folder = "data/raw/meteo-greener"
+    out_folder = "raw/meteo-greener"
 
     # Example data repository name
     repository = "remote-sensing-ense3-grenoble-inp/meteo-greener"
@@ -34,8 +36,8 @@ def download_data():
     dotenv.load_dotenv()
     token = os.getenv("HUGGINGFACE_TOKEN")
 
-    cwd = Path(__file__).resolve().parents[2]
-    target_directory = cwd / out_folder
+    data_path = paths.data()
+    target_directory = data_path / out_folder
     if not target_directory.exists():
         if token is None:
             raise ValueError(
@@ -61,12 +63,12 @@ def download_data():
 
 
 def visualize_data():
-    filename_rgb = "data/raw/meteo-greener/data/examples/19-07-01/cam2 UTC 19-07-01_10-59-59-40.jpg"
-    filename_csv = "data/raw/meteo-greener/data/Meteo_GreEnER_01_Hour_2019_annee.csv"
+    filename_rgb = "raw/meteo-greener/data/examples/19-07-01/cam2 UTC 19-07-01_10-59-59-40.jpg"
+    filename_csv = "raw/meteo-greener/data/Meteo_GreEnER_01_Hour_2019_annee.csv"
 
-    cwd = Path(__file__).resolve().parents[2]
-    file_rgb = cwd / filename_rgb
-    file_csv = cwd / filename_csv
+    data_path = paths.data()
+    file_rgb = data_path / filename_rgb
+    file_csv = data_path / filename_csv
 
     img = imageio.v3.imread(file_rgb)
     df = pd.read_csv(file_csv, skiprows=[0, 2, 3])
@@ -88,7 +90,7 @@ def visualize_data():
     ax[1].xaxis.set_major_formatter(mdates.DateFormatter('%b %d'))  # e.g., 'Jul 01'
     ax[1].set_ylabel(f"Temperature ({measure_unit['AirTemp_Avg'].iloc[0]})")
 
-    fig.savefig(cwd / "data/outputs/demo.png")
+    fig.savefig(data_path / "outputs/demo.png")
     plt.close(fig)
 
 

@@ -1,24 +1,24 @@
-from pathlib import Path
 import os
 import shutil
 
 import numpy as np
 import huggingface_hub
-import rasterio
 import matplotlib.pyplot as plt
 from scipy.io import loadmat
 import tifffile
 
+from snow_ts import paths
+
 
 def download_data():
     # Download target folder relative to current path
-    out_folder = "data/raw/modis-snow-coverage"
+    out_folder = "raw/modis-snow-coverage"
 
     # Example data repository name
     repository = "remote-sensing-ense3-grenoble-inp/modis-snow-coverage"
 
-    cwd = Path(__file__).resolve().parents[2]
-    target_directory = cwd / out_folder
+    data_path = paths.data()
+    target_directory = data_path / out_folder
     if not target_directory.exists():
         try:
             target_directory.mkdir(parents=True, exist_ok=True)
@@ -31,17 +31,17 @@ def download_data():
         except Exception as e:
             shutil.rmtree(target_directory)
             raise ValueError(
-                f"Error downloading repository." +
+                "Error downloading repository." +
                 f"{e}"
             )
 
 
 def visualize_data():
-    filename_hsi = "data/raw/modis-snow-coverage/data/2013039/Modimlab_2013039_reproj2.tif"
-    filename_mat = "data/raw/modis-snow-coverage/data/2013039/Spot_degrade_2013039.mat"
-    cwd = Path(__file__).resolve().parents[2]
-    file_hsi = cwd / filename_hsi
-    file_mat = cwd / filename_mat
+    filename_hsi = "raw/modis-snow-coverage/data/2013039/Modimlab_2013039_reproj2.tif"
+    filename_mat = "raw/modis-snow-coverage/data/2013039/Spot_degrade_2013039.mat"
+    data_path = paths.data()
+    file_hsi = data_path / filename_hsi
+    file_mat = data_path / filename_mat
 
     mat_handler = loadmat(file_mat)
     array_spot = mat_handler["Spot_degrade"]
@@ -57,8 +57,9 @@ def visualize_data():
     ax[0].imshow(rgb_array)
     ax[0].set_title("MODIS acquisition")
     ax[1].imshow(array_spot, cmap="gray")
-    ax[1].set_title("SPOT refererence")
-    plt.show()
+    ax[1].set_title("SPOT reference")
+    fig.savefig(data_path / "outputs/demo.png")
+    plt.close(fig)
 
 
 def main():

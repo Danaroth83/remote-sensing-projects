@@ -1,6 +1,3 @@
-from pathlib import Path
-import os
-
 import huggingface_hub
 import cartopy.crs as ccrs
 import cartopy.feature as cfeature
@@ -8,16 +5,17 @@ import xarray as xr
 import h5netcdf
 import matplotlib.pyplot as plt
 
+from pollution import paths
 
 def download_data():
     # Download target folder relative to current path
-    out_folder = "data/raw/tropomi-pollution"
+    out_folder = "raw/tropomi-pollution"
 
     # Example data repository name
     repository = "remote-sensing-ense3-grenoble-inp/tropomi-pollution"
 
-    cwd = Path(__file__).resolve().parents[2]
-    target_directory = cwd / out_folder
+    data_path = paths.data()
+    target_directory = data_path / out_folder
     if not target_directory.exists():
         try:
             target_directory.mkdir(parents=True, exist_ok=True)
@@ -29,14 +27,14 @@ def download_data():
         except Exception as e:
             target_directory.rmdir()
             raise ValueError(
-                f"Error downloading repository." +
+                "Error downloading repository." +
                 f"{e}"
             )
 
 def data_info():
-    filename = "data/raw/tropomi-pollution/data/27_09_2020.nc"
-    cwd = Path(__file__).resolve().parents[2]
-    file_nc = cwd / filename
+    filename = "raw/tropomi-pollution/data/27_09_2020.nc"
+    data_path = paths.data()
+    file_nc = data_path / filename
 
     with h5netcdf.File(file_nc, "r") as f:
         print(list(f.groups.keys()))
@@ -46,9 +44,9 @@ def data_info():
 
 
 def visualize_data():
-    filename = "data/raw/tropomi-pollution/data/27_09_2020.nc"
-    cwd = Path(__file__).resolve().parents[2]
-    file_nc = cwd / filename
+    filename = "raw/tropomi-pollution/data/27_09_2020.nc"
+    data_path = paths.data()
+    file_nc = data_path / filename
 
     ds = xr.open_dataset(file_nc, group="PRODUCT")
 
@@ -69,7 +67,7 @@ def visualize_data():
     ax.set_ylabel("Latitude")
     ax.set_title("TROPOMI Tropospheric NO₂ Column")
     fig.tight_layout()
-    fig.savefig(cwd / "data/outputs/demo.png")
+    fig.savefig(data_path / "outputs/demo.png")
     plt.close(fig)
 
 

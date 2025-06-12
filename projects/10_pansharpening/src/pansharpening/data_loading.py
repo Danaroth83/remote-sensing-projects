@@ -1,4 +1,3 @@
-from pathlib import Path
 import os
 import shutil
 
@@ -7,6 +6,8 @@ import numpy as np
 import huggingface_hub
 import matplotlib.pyplot as plt
 import imageio
+
+from pansharpening import paths
 
 def download_data():
     # The repository of this data is private
@@ -24,7 +25,7 @@ def download_data():
     #      ```
 
     # Download target folder relative to current path
-    out_folder = "data/raw/spot-pansharpening"
+    out_folder = "raw/spot-pansharpening"
 
     # Example data repository name
     repository = "remote-sensing-ense3-grenoble-inp/spot-pansharpening"
@@ -32,8 +33,8 @@ def download_data():
     dotenv.load_dotenv()
     token = os.getenv("HUGGINGFACE_TOKEN")
 
-    cwd = Path(__file__).resolve().parents[2]
-    target_directory = cwd / out_folder
+    data_path = paths.data()
+    target_directory = data_path / out_folder
     if not target_directory.exists():
         if token is None:
             raise ValueError(
@@ -53,18 +54,18 @@ def download_data():
         except Exception as e:
             shutil.rmtree(target_directory)
             raise ValueError(
-                f"Error downloading repository." +
+                "Error downloading repository." +
                 f"{e}"
             )
 
 
 def visualize_data():
-    filename_ms = "data/raw/spot-pansharpening/data/1.TIF"
-    filename_pan = "data/raw/spot-pansharpening/data/3.TIF"
+    filename_ms = "raw/spot-pansharpening/data/1.TIF"
+    filename_pan = "raw/spot-pansharpening/data/3.TIF"
 
-    cwd = Path(__file__).resolve().parents[2]
-    file_ms = cwd / filename_ms
-    file_pan = cwd / filename_pan
+    data_path = paths.data()
+    file_ms = data_path / filename_ms
+    file_pan = data_path / filename_pan
 
     img_ms = imageio.v3.imread(file_ms)
     img_ms = np.moveaxis(img_ms,[-3, -2, -1], [2, 0, 1])
@@ -78,7 +79,7 @@ def visualize_data():
     ax[0].set_title("Multispectral")
     ax[1].imshow(img_pan, cmap="gray")
     ax[1].set_title("Panchromatic")
-    fig.savefig(cwd / "data/outputs/demo.png")
+    fig.savefig(data_path / "outputs/demo.png")
     plt.close(fig)
 
 
