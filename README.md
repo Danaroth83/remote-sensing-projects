@@ -138,12 +138,6 @@ Additionally, the student will develop the following set of acquired skills:
     pip install pip --upgrade
     pip install -e .
     ```
-    or, more briefly, using the provided script:
-    ```bash
-    cd projectname
-    source install.sh
-    ```
-
   - On Windows:
     ```
     cd projectname
