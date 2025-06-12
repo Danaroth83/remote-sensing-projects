@@ -52,7 +52,10 @@ def visualize_data():
 
     fig, ax = plt.subplots()
     ax.imshow(frame_rgb)
-    fig.savefig(data_path / "outputs/demo.png")
+
+    output_path = data_path / "outputs/demo.png"
+    fig.savefig(output_path)
+    print(f"Image saved to {output_path}")
     plt.close(fig)
 
 

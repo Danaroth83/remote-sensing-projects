@@ -90,7 +90,9 @@ def visualize_data():
     ax[1].xaxis.set_major_formatter(mdates.DateFormatter('%b %d'))  # e.g., 'Jul 01'
     ax[1].set_ylabel(f"Temperature ({measure_unit['AirTemp_Avg'].iloc[0]})")
 
-    fig.savefig(data_path / "outputs/demo.png")
+    output_path = data_path / "outputs/demo.png"
+    fig.savefig(output_path)
+    print(f"Image saved to {output_path}")
     plt.close(fig)
 
 

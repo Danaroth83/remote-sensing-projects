@@ -61,7 +61,9 @@ def visualize_data():
         )
         ax.add_patch(rect)
 
-    fig.savefig(data_path / "outputs/demo.png")
+    output_path = data_path / "outputs/demo.png"
+    fig.savefig(output_path)
+    print(f"Image saved to {output_path}")
     plt.close(fig)
 
 

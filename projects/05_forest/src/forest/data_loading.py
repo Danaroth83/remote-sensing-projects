@@ -121,7 +121,9 @@ def visualize_data():
         title="Classes",
     )
 
-    fig.savefig(data_path / "outputs/demo.png")
+    output_path = data_path / "outputs/demo.png"
+    fig.savefig(output_path)
+    print(f"Image saved to {output_path}")
     plt.close(fig)
 
 

@@ -58,7 +58,10 @@ def visualize_data():
     ax[0].set_title("MODIS acquisition")
     ax[1].imshow(array_spot, cmap="gray")
     ax[1].set_title("SPOT reference")
-    fig.savefig(data_path / "outputs/demo.png")
+
+    output_path = data_path / "outputs/demo.png"
+    fig.savefig(output_path)
+    print(f"Image saved to {output_path}")
     plt.close(fig)
 
 
