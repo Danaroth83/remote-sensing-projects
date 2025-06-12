@@ -1,3 +1,0 @@
-*.pdf !text !filter !merge !diff
-*/*.pdf !text !filter !merge !diff
-*/*/*.pdf !text !filter !merge !diff
