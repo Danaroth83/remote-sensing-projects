@@ -41,6 +41,9 @@ This project will be developed in Python.
 - The datasets associated to the projects are available at:  
   <https://huggingface.co/remote-sensing-ense3-grenoble-inp>
 
+- (Supervisors only) Private repository for course organization:  
+  <https://www.gricad-gitlab.univ-grenoble-alpes.fr/piconed/remote-sensing-projects-instructors.git>
+  
 
 ### Objectives of the course
 The main objectives of this project are:
@@ -313,6 +316,10 @@ More general purpose instructions are available at:
 
 ![Example of image acquired by SPOT for ship detection.](./docs/figures/ships_xs.jpg)
 
+#### [9 - Remote Sensing video analysis](projects/09_rs_video)
+
+![Frame of remote sensing video](./docs/figures/beach.png)
+
 #### [10 - Pansharpening with SPOT](projects/10_pansharpening)
 
 ![Example of SPOT multispectral and panchromatic](./docs/figures/pansharpening.png)
@@ -326,10 +333,6 @@ More general purpose instructions are available at:
 #### [7 - Urban Monitoring: Change Detection Bundle](projects/07_change_detection)
 
 <!--- ![change_detection](./docs/figures/change-detection.jpg) --->
-
-#### [9 - Remote Sensing video analysis](projects/09_rs_video)
-
-<!--- ![Frame of remote sensing video](./docs/figures/beach.jpg) --->
 
 #### [11 - Deforestation of the Amazon forest](projects/11_deforestation)
 
