@@ -261,7 +261,8 @@ Henceforth, in your project folder:
 The deliverables are to be handled by:
 - providing a link to the forked repository, with access granted to your
   supervisors. This is the preferred method, as it allows to also store
-  your data.  
+  your data.
+
 These methods are also allowed in case of emergencies:
 - as a mail to the supervisors (please include only your project folder), 
   using a [https://filesender.renater.fr/](Renater) link. Please confirm 
