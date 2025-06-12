@@ -337,8 +337,8 @@ More general purpose instructions are available at:
     - Ch 1, 2, 4 (Ipython, NumPy, Matplotlib)
     - [optional] Ch. 3, 5 (Pandas, Machine Learning)
     - [jupyter.pdf](docs/python/jupyter.pdf)
-  - [optional] Tutorial on Jupyter showcasing jupyter features and installation  <https://www.youtube.com/watch?v=HW29067qVWk>
-  - conda cheatsheet <https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf>
+  - [Optional] Tutorial on Jupyter showcasing jupyter features and installation  
+    <https://www.youtube.com/watch?v=HW29067qVWk>
 
 - Git
   - Introductory videos at <https://git-scm.com/videos> [~30 min in total]
