@@ -21,5 +21,8 @@ torch-backend = "auto"
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools.packages.find]
-where = ["src"]
+[tool.setuptools]
+packages = ["meteo"]
+
+[tool.setuptools.package-dir]
+"" = "."

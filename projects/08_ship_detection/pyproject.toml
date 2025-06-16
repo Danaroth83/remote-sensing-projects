@@ -19,5 +19,8 @@ torch-backend = "auto"
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools.packages.find]
-where = ["src"]
+[tool.setuptools]
+packages = ["ship_detection"]
+
+[tool.setuptools.package-dir]
+"" = "."
