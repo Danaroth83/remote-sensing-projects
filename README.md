@@ -90,7 +90,7 @@ Additionally, the student will develop the following set of acquired skills:
 
 - From this repository, navigate to the folder of the chosen project
 - That is you should click on `projects` and then  on `xx_projectname`.
-  Here, `xx` denotes a numeric index and `project` is your assigned
+  Here, `xx` denotes a numeric index and `projectname` is your assigned
   project name.
 - You should now see files like `PROJECT_OVERVIEW.md`, among many others.
 - On the top right, click on the blue button `Code` and `Download this folder`
@@ -103,19 +103,22 @@ Additionally, the student will develop the following set of acquired skills:
 - Go to gricad-gitlab: <https://gricad-gitlab.univ-grenoble-alpes.fr/>
 - Click on **New project** > **Blank project**
 - Select a project name, put it as **Public**, and de-select 
-  "Add README.md"
+  "Initialize repository with a README".
+- Assign a name to your project in the empty bar "Project slug" and pick your
+  AGALAN in the empty bar that mentions "Pick a group or namespace"
 - Note down the repository name. Should be something like:
   ```
-  https://gricad-gitlab.univ-grenoble-alpes.fr/username/project.git
+  https://gricad-gitlab.univ-grenoble-alpes.fr/username/repositoryname.git
   ```
-  where `username` is your AGALAN and `project` is the project name
+  where `username` is your AGALAN and `repositoryname` is the name you have
+  assigned to your repository
 - Add the colleagues in your group to the owners/mantainers of the project
-- On the left bar click "Members" and then on the top right "Add members" on the
-  page it opens.
-  Note: "Add members" is a blue button that appears only if you are 
-  owner/mantainer.
-- In the search bar, look for the agalan of your team members and add them to 
-  the repository as owners or mantainers.
+  - On the left bar click "Members" and then on the top right "Add members" on
+    the page that opens.
+    Note: "Add members" is a blue button that appears only if you are 
+    owner/mantainer.
+  - In the search bar, look for the AGALAN of your team members and add them to 
+    the repository as owners or mantainers.
 
 ### Link local code to your remote repository
 
@@ -129,19 +132,24 @@ Additionally, the student will develop the following set of acquired skills:
 - Once you are at the root of your project, type in the terminal:
   ```bash
   git init -b main
-  git remote add origin https://gricad-gitlab.univ-grenoble-alpes.fr/username/project.git
+  git remote add origin https://gricad-gitlab.univ-grenoble-alpes.fr/username/xx_projectname.git
   git pull origin main
   ```
   with the proper link you have generated in the previous step.
 
 ### Create your virtual enviroment
 
+- Navigate to the root of your project. 
+  This would require to navigate inside `repositoryname` once you have cloned 
+  your local repository; i. e. on terminal:  
+  ```
+  cd repositoryname
+  ```
 - Install your project dependencies and download the data for your project
   by typing in the terminal:
 
   - On Linux/Mac:
     ```bash
-    cd projectname
     python -m venv .venv --prompt projectname
     source .venv/bin/activate
     pip install pip --upgrade
@@ -149,7 +157,6 @@ Additionally, the student will develop the following set of acquired skills:
     ```
   - On Windows:
     ```
-    cd projectname
     python -m venv .venv --prompt projectname
     Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
     .\.venv\Scripts\activate
@@ -160,9 +167,9 @@ Additionally, the student will develop the following set of acquired skills:
 
 - You can then test the loading script provided:
   ```bash
-  python project/data_loading.py
+  python projectname/data_loading.py
   ```
-  where `project` is the name of your project.  
+  where `projectname` is the name of your project.  
   If the script runs correctly, a saved figure should be available in 
   `data/outputs/demo.png`.
 
@@ -243,7 +250,9 @@ At the final session of the course, each group has to provide:
 - A pdf for the final presentation slides, extending the mid-course one with:
   - A description of the methods
   - A visual comparison of the results
-- A final report written in a compiled pdf (e.g. from LaTeX or Word) or a fully annotated notebook, which details all the work done during the in the project:
+- A final report written in a compiled pdf (e.g. from LaTeX or Word) or a 
+  fully annotated notebook, which details all the work done during the 
+  project:
     - Sources used in your work (literature, online repositories)
     - Problem statement, with detailed formulation of the input and outputs
     - Mathematical description of the methods
