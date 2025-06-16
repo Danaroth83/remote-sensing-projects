@@ -160,7 +160,8 @@ Additionally, the student will develop the following set of acquired skills:
 
 - You can then test the loading script provided:
   ```bash
-  python src/project/data_loading.py
+  cd src
+  python project/data_loading.py
   ```
   where `project` is the name of your project.  
   If the script runs correctly, a saved figure should be available in 
