@@ -100,25 +100,29 @@ Additionally, the student will develop the following set of acquired skills:
 
 ### Create a personal git repository
 
-- Go to gricad-gitlab: <https://gricad-gitlab.univ-grenoble-alpes.fr/>
-- Click on **New project** > **Blank project**
-- Select a project name, put it as **Public**, and de-select 
-  "Initialize repository with a README".
-- Assign a name to your project in the empty bar "Project slug" and pick your
-  AGALAN in the empty bar that mentions "Pick a group or namespace"
+- To create your own repository:
+  - Go to gricad-gitlab: <https://gricad-gitlab.univ-grenoble-alpes.fr/>
+  - Click on **New project** > **Blank project**;
+  - Pick your AGALAN in the empty bar that mentions "Pick a group or 
+    namespace";
+  - Assign a name (from now on, `repositoryname`) to your project in the empty 
+    bar "Project slug";
+  - Select **Public** as visibility level;
+  - De-select "Initialize repository with a README";
+  - Click **Create project**.
 - Note down the repository name. Should be something like:
   ```
   https://gricad-gitlab.univ-grenoble-alpes.fr/username/repositoryname.git
   ```
-  where `username` is your AGALAN and `repositoryname` is the name you have
+  where `username` is your AGALAN and `repositoryname` is the name that you
   assigned to your repository
 - Add the colleagues in your group to the owners/mantainers of the project
   - On the left bar click "Members" and then on the top right "Add members" on
     the page that opens.
     Note: "Add members" is a blue button that appears only if you are 
     owner/mantainer.
-  - In the search bar, look for the AGALAN of your team members and add them to 
-    the repository as owners or mantainers.
+  - In the search bar, look for the AGALAN of your team members and add them 
+    to the repository as owners or mantainers.
 
 ### Link local code to your remote repository
 
