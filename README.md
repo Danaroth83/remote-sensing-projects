@@ -282,9 +282,7 @@ These methods are also allowed in case of emergencies:
   Chamilo has a file size limit for uploads, so this is the least preferred
   approach.
 
-The instructions for interfacing through `git` are located in:
-`docs/git/report/instructions.pdf`  
-More general purpose instructions are available at:
+The instructions for interfacing through `git` are located in:  
 `docs/git/instructions_git.md`.
 
 
